@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- icon animated -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>RestApis FatherBot</title>
+    <link href="https://inirey.github.io/lolhuman/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://inirey.github.io/lolhuman/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://inirey.github.io/lolhuman/css/default.css" rel="stylesheet">
+    <link href="https://inirey.github.io/lolhuman/css/style.css" rel="stylesheet">
+    <script type="text/javascript">
+    window.setTimeout("waktu()",1000);
+    function waktu() {
+        var tanggal = new Date();
+        setTimeout("waktu()",1000);
+        document.getElementById("jam").innerHTML = tanggal.getHours();
+        document.getElementById("menit").innerHTML = tanggal.getMinutes();
+        document.getElementById("detik").innerHTML = tanggal.getSeconds();
+    }
+</script>
+</head>
+<style>
+    #jam-digital{overflow:hidden; width:350px}
+    #hours{float:left; width:10px; height:50px; background-color: transparent; margin-right:15px; margin-left:15px}
+    #minute{float:left; width:30px; height:50px; background-color: transparent}
+    #second{float:right; width:30px; height:50px; background-color: transparent; margin-left:10px}
+    #jam-digital p{color:#FFF; font-size:36px; text-align:center; margin-top:4px}
+</style>
+<body id="page-top" class="dark-mode">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <i class="fa fa-smile-beam fa-2x"></i>
+                <div class="sidebar-brand-text mx-3">RestApis FatherBot</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-fw fa-thermometer-three-quarters"></i>
+                    <span>Statistic</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Features
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/downloader"">
+                    <i class="fa fa-fw fa-arrow-down"></i>
+                    <span>Downloader</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/textmaker"">
+                    <i class="fa fa-fw fa-font"></i>
+                    <span>Text maker</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/islami"">
+                    <i class="fas fa-star-and-crescent"></i>
+                    <span>Islamic</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/simisimi"">
+                    <i class="fas fa-smile"></i>
+                    <span>Simi simi</span>
+                </a>
+            </li>
+            
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/primbon"">
+                    <i class="fas fa-star"></i>
+                    <span>primbon</span>
+                </a>
+            </li>
+            
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/randomimage"">
+                    <i class="fa fa-fw fa-image"></i>
+                    <span>Random image</span>
+                </a>
+                </li>
+ 
+ 
+ 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/nsfw"">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Nsfw</span>
+                </a>
+      </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/randomanime"">
+                    <i class="fa fa-fw fa-cat"></i>
+                    <span>Random Anime</span>
+                </a>
+                
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/docs/sticker"">
+                    <i class="fas fa-smile"></i>
+                    <span>Sticker & Canvas</span>
+                </a>
+
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Contact
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="https://t.me/tinoisgoodtxt">
+                    <i class="fab fa-fw fa-telegram-plane"></i>
+                    <span>Telegram</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+        </ul>
+        <!-- Sidebar -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- TopBar -->
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul class="navbar-nav ml-auto">
+              <div class="topbar-divider d-none d-sm-block"></div>
+              <li class="nav-item dropdown no-arrow">
+              </a>
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <span class="badge badge-success badge-counter">2 </span>
+              </a>
+                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header bg-info-gradient">
+                  INFO CENTER
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-danger">
+                      <i class="fas fa-info-circle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">May 05, 2021</div>
+                    <span style="font-size:12px;">Delete Apikey: OneDayOneCharity</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-danger">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">November 19, 2020</div>
+                    <span style="font-size:14px;">Kelahiran Rest Api</span>
+                  </div>
+                </a>
+              </div>
+            </li>
+            </ul>
+  </nav>
+                <!-- Sidebar -->
+
+                    <!-- Container Fluid-->
+                    	
+                    
+                    
+                    
+                    <div class="container-fluid" id="container-wrapper">
+                        <div class="card h-50 mb-4">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                    <h3 style="margin-bottom: 0;"><i class="fas fa-solid fa-eye-dropper"></i> README</h3>
+    
+                    <div class="card-body mb-3">
+                        <ol>
+                            <li>Apikey Ini Gratis Untuk Creator Bot WhatsApp.</li>
+                            <li>Jika Ada Yang Error Silahkan Hubungi Kami.</li>
+                            <li>Semua fitur yang ada di sini free dan unlimited request.</li>
+                            <li>Rest API sewaktu waktu akan maintenance.</li>
+                            <li>Jangan Spam Apikey Ya.</li>
+                        </ol>
+                    </div>
+                                    </div>
+                                    <div class="col-auto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                           <div class="card h-50 mb-4">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                    <h3 style="margin-bottom: 0;"><i class="fas fa-solid fa-splotch"></i> THANKS TO</h3>
+    
+                    <div class="card-body mb-3">
+                        <ol>
+                            <li>Allah SWT</li>
+                            <li>Orang Tua</li>
+                            <li>Tino</li>
+                            <li>Erza Api</li>
+                            <li>Hana</li>
+                        </ol>
+                    </div>
+                                    </div>
+                                    <div class="col-auto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card h-50 mb-4">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                    <h3 style="margin-bottom: 0;"><i class="fas fa-solid fa-headset"></i> CONTACT ME</h3>
+    
+                    <div class="card-body mb-3">
+                        <ol>
+                        	<p>Hai User Free :</p>
+                            <li>Hubungi Saya, Jika Ada RestApi Yang Eror.</li>
+                            <li>Jika Tidak Tau Apikey nya, Chat Gua ya.</li>
+                                                <p style="margin-bottom: 0;"><i class="fas fa-solid fa-headset"></i> <a href="http://instagram.com/tinoisgood">Instagram</a></p>
+                                                <p style="margin-bottom: 0;"><i class="fas fa-solid fa-headset"></i> <a href="http://wa.me/6281535365496">WhatsApp</a></p>
+                        </ol>
+                    </div>
+                                    </div>
+                                    <div class="col-auto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        	
+                        
+                        <!-- Earnings (Annual) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card h-50">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                    	<div class="col-auto">
+                                            <i class="fas fa-solid fa-clock"></i>
+                                        </div>
+                                        <div id="jam-digital class="col mr-2">
+                                        	<div class="text-xs font-weight-bold text-uppercase mb-1">LOCAL TIME</div>
+                                           <div id="hours" class="h5 mb-0 font-weight-bold"><p id="jam"></p></div>
+                                           <div id="minute" class="h5 mb-0 font-weight-bold"><p id="menit"></p></div>     
+                                           <div id="second" class="h5 mb-0 font-weight-bold"><p id="detik"></p></div>                                      
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card h-50">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-uppercase mb-1">Requests</div>
+                                            <div class="h5 mb-0 font-weight-bold">8372</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar faa-wrench animated fa-2x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Row-->
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            Someone want to donate me?
+                            <p>
+                                <a href="https://trakteer.id/erzabot" class="btn btn-primary btn-sm mr-2" target="_blank"><i class="fa fa-fw fa-wallet"></i>&nbsp;Trakteer</a>
+                                <a href="https://paypal.me/anjay" class="btn btn-primary btn-sm ml-2" target="_blank"><i class="fab fa-fw fa-paypal"></i>&nbsp;Paypal</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!---Container Fluid-->
+            </div>
+            <!-- Footer -->
+            <footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        Made with by
+                        <a href="http://wa.me/6281535365496" target="_blank" style="color: #fff;">Tino Gustino</a><i class="fa fa-heart faa-flash animated"></i>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer -->
+        </div>
+    </div>
+
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="https://inirey.github.io/lolhuman/vendor/jquery/jquery.min.js"></script>
+    <script src="https://inirey.github.io/lolhuman/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://inirey.github.io/lolhuman/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://inirey.github.io/lolhuman/js/ruang-admin.min.js"></script>
+</body>
+
+</html>
