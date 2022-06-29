@@ -34,7 +34,7 @@ router.get('/docs/sticker', (req, res) => {
     res.sendFile(__path + '/views/sticker.html')
 })
 router.get('/docs/game', (req, res) => {
-    res.sendFile(__path + '/views/game.html')
+    res.sendFile(__path + '/views/games.html')
 })
 router.get('/', (req, res) => {
     res.sendFile(__path + '/views/docs.html')
